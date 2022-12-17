@@ -50,8 +50,8 @@ https://templatemo.com/tm-532-next-level
                     <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="index.html">Home</a>
                   </li>
-                  <li class="nav-item active">
-                    <div class="tm-nav-link-highlight"></div>
+                  <li class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ml-auto mr-0"></div>
                     <a class="nav-link" href="projects.html">Projects</a>
                   </li>
                   <li class="nav-item active">
@@ -251,12 +251,20 @@ https://templatemo.com/tm-532-next-level
       });
 
       //Breakout Game
+      // Build canvas
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
+      // Red rectangle
       ctx.beginPath();
       ctx.rect(20, 40, 50, 50);
       ctx.fillStyle = "#FF0000";
       ctx.fill();
+      ctx.closePath();
+      // Rectangle with stroke
+      ctx.beginPath();
+      ctx.rect(160, 10, 100, 40);
+      ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+      ctx.stroke();
       ctx.closePath();
     </script>
   </body>
