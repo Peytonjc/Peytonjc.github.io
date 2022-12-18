@@ -254,18 +254,27 @@ https://templatemo.com/tm-532-next-level
       // Build canvas
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
-      // Red rectangle
-      ctx.beginPath();
-      ctx.rect(20, 40, 50, 50);
-      ctx.fillStyle = "#FF0000";
-      ctx.fill();
-      ctx.closePath();
-      // Rectangle with stroke
-      ctx.beginPath();
-      ctx.rect(160, 10, 100, 40);
-      ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
-      ctx.stroke();
-      ctx.closePath();
+      // Initialize X and Y
+      let x = canvas.width / 2;
+      let y = canvas.height - 30;
+      // Initialize X and Y changes
+      let dx = 2;
+      let dy = -2;
+      // Draw function
+      function draw() {
+        // drawing code
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, Math.PI * 2);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+        x += dx;
+        y += dy;
+      }
+      // Run drawing loop every 10   This will need to be called and stopped when the tab changes...
+      setInterval(draw, 10);
+      
     </script>
   </body>
 </html>
