@@ -260,15 +260,31 @@ https://templatemo.com/tm-532-next-level
       // Initialize X and Y changes
       let dx = 2;
       let dy = -2;
-      // Draw function
-      function draw() {
-        // drawing code
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, 10, 0, Math.PI * 2);
         ctx.fillStyle = "#0095DD";
         ctx.fill();
         ctx.closePath();
+      }
+
+      function checkCollision() {
+        if (x <= 0 || x >= canvas.width){
+          dx = dx * -1;
+        }
+        if (y <= 0 || y >= canvas.height)
+        {
+          dy = dy * -1;
+        }
+      }
+
+      // Draw function
+      function draw() {
+        // drawing code
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBall();
+        checkCollision();
         x += dx;
         y += dy;
       }
