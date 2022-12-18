@@ -286,12 +286,6 @@ https://templatemo.com/tm-532-next-level
         }
       }
 
-      if (rightPressed) {
-        paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
-      } else if (leftPressed) {
-        paddleX = Math.max(paddleX - 7, 0);
-      }
-
       function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
@@ -325,6 +319,18 @@ https://templatemo.com/tm-532-next-level
         drawBall();
         drawPaddle();
         checkCollision();
+        if(rightPressed) {
+          paddleX += 7;
+          if (paddleX + paddleWidth > canvas.width){
+              paddleX = canvas.width - paddleWidth;
+          }
+        }
+        else if(leftPressed) {
+          paddleX -= 7;
+          if (paddleX < 0){
+              paddleX = 0;
+          }
+        }
         x += dx;
         y += dy;
       }
