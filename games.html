@@ -251,6 +251,7 @@ https://templatemo.com/tm-532-next-level
       });
 
       //Breakout Game
+      // https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
       // Build canvas
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
@@ -306,11 +307,20 @@ https://templatemo.com/tm-532-next-level
         if (x + dx <= ballRadius|| x + dx >= canvas.width - ballRadius){
           dx = -dx;
         }
-        if (y + dy <= ballRadius || y + dy >= canvas.height - ballRadius)
-        {
+        if (y + dy < ballRadius) {
           dy = -dy;
+        } else if (y + dy > canvas.height - ballRadius) {
+          if (x > paddleX && x < paddleX + paddleWidth) {
+            dy = -dy;
+          } else {
+            alert("GAME OVER");
+            document.location.reload();
+            clearInterval(interval); // Needed for Chrome to end game
+          }
         }
+
       }
+      
 
       // Draw function
       function draw() {
@@ -335,7 +345,7 @@ https://templatemo.com/tm-532-next-level
         y += dy;
       }
       // Run drawing loop every 10   This will need to be called and stopped when the tab changes...
-      setInterval(draw, 10);
+      const interval = setInterval(draw, 10);
       
     </script>
   </body>
