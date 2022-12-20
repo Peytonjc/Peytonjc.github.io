@@ -237,6 +237,14 @@ https://templatemo.com/tm-532-next-level
             .children("div")
             .hide();
           $(target).show();
+          if (target == "#tab1")
+          {
+            const interval = setInterval(draw, 10);
+          }
+          else
+          {
+            clearInterval(interval);
+          }
 
           // Scroll to tab content (for mobile)
           if ($(window).width() < 992) {
