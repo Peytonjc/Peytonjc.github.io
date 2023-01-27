@@ -359,6 +359,13 @@ https://templatemo.com/tm-532-next-level
         } else if (y + dy > canvas.height - ballRadius) {
           if (x > paddleX && x < paddleX + paddleWidth) {
             dy = -dy;
+            if (x < paddleX + (paddleWidth / 2)){
+              dx = -abs(dx);
+            }
+            else
+            {
+              dx = abs(dx);
+            }
           } else {
             alert("GAME OVER");
             clearInterval(breakoutInterval); // Needed for Chrome to end game
