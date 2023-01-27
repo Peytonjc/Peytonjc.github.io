@@ -219,6 +219,7 @@ https://templatemo.com/tm-532-next-level
     <script src="js/bootstrap.min.js"></script>
     <script>
       $(function() {
+        var interval = null
         // Tabs
         $(".tabgroup > div").hide();
         $(".tabgroup > div:first-of-type").show();
@@ -237,7 +238,14 @@ https://templatemo.com/tm-532-next-level
             .children("div")
             .hide();
           $(target).show();
-          if (target == "#tab1")
+          if (target == "#tab1"){
+            if (interval !== null) return;
+            interval = setInterval(draw, 10);
+          }
+          else{
+            clearInterval(interval);
+            interval = null
+          }
 
           // Scroll to tab content (for mobile)
           if ($(window).width() < 992) {
@@ -395,7 +403,7 @@ https://templatemo.com/tm-532-next-level
         y += dy;
       }
       // Run drawing loop every 10   This will need to be called and stopped when the tab changes...
-      const interval = setInterval(draw, 10);
+      //var interval = setInterval(draw, 10);
       
     </script>
   </body>
