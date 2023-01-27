@@ -360,11 +360,11 @@ https://templatemo.com/tm-532-next-level
           if (x > paddleX && x < paddleX + paddleWidth) {
             dy = -dy;
             if (x < paddleX + (paddleWidth / 2)){
-              dx = -abs(dx);
+              dx = -Math.abs(dx);
             }
             else
             {
-              dx = abs(dx);
+              dx = Math.abs(dx);
             }
           } else {
             alert("GAME OVER");
