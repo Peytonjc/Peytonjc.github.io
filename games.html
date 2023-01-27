@@ -218,7 +218,8 @@ https://templatemo.com/tm-532-next-level
     <script src="js/parallax.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-      let interval = null
+      let breakoutInterval = null
+      let breakoutGameOver = false
       $(function() {
         
         // Tabs
@@ -239,13 +240,13 @@ https://templatemo.com/tm-532-next-level
             .children("div")
             .hide();
           $(target).show();
-          if (target == "#tab1"){
-            if (interval !== null) return;
-            interval = setInterval(draw, 10);
+          if (target == "#tab1" && !breakoutGameOver){
+            if (breakoutInterval !== null) return;
+            breakoutInterval = setInterval(draw, 10);
           }
           else{
-            clearInterval(interval);
-            interval = null
+            clearInterval(breakoutInterval);
+            breakoutInterval = null
           }
 
           // Scroll to tab content (for mobile)
@@ -358,7 +359,8 @@ https://templatemo.com/tm-532-next-level
             dy = -dy;
           } else {
             alert("GAME OVER");
-            clearInterval(interval); // Needed for Chrome to end game
+            clearInterval(breakoutInterval); // Needed for Chrome to end game
+            breakoutGameOver = true;
           }
         }
 
