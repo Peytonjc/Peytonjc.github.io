@@ -259,6 +259,7 @@ https://templatemo.com/tm-532-next-level
             );
           }
         });
+        drawStartMenu();
       });
 
       //Breakout Game
@@ -400,11 +401,15 @@ https://templatemo.com/tm-532-next-level
         ctx.fillText(`Score: ${score}`, 8, 20);
       }
       function drawStartMenu() {
+        startWidth = 100;
+        startHeight = 50;
+        startX = ((canvas.width - startWidth)/2);
+        startY = ((canvas.height - startHeight) / 2)
         ctx.fillStyle = '#669999';
-        ctx.rect(canvas.width / 2, canvas.height / 2, 50, 20);
+        ctx.rect(startX, startY, startWidth, startHeight);
         ctx.fill();
         ctx.closePath();
-        ctx.font = "22px Arial";
+        ctx.font = "18px Arial";
         ctx.fillStyle = "#0095DD";
         ctx.fillText(`Start Game`, canvas.width / 2, canvas.height / 2);
         ctx.closePath();
