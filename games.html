@@ -267,6 +267,12 @@ https://templatemo.com/tm-532-next-level
       // Build canvas
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
+      // Initialize start button object
+      startWidth = 100;
+      startHeight = 40;
+      startX = ((canvas.width - startWidth)/2);
+      startY = ((canvas.height - startHeight) / 2);
+      let startRect = {x: startX, y: startY, width: startWidth, height: startHeight};
       // Initialize X, Y, and ball radius
       let x = canvas.width / 2;
       let y = canvas.height - 30;
@@ -333,7 +339,7 @@ https://templatemo.com/tm-532-next-level
       document.addEventListener("keyup", keyUpHandler, false);
       canvas.addEventListener('click', function(evt) {
       var mousePos = getMousePos(canvas, evt);
-      if (isInsideStart(mousePos,rect)) {
+      if (isInsideStart(mousePos,startRect)) {
         breakoutInterval = setInterval(draw, 10);
         }else{
             
@@ -421,17 +427,14 @@ https://templatemo.com/tm-532-next-level
         ctx.fillText(`Score: ${score}`, 8, 20);
       }
       function drawStartMenu() {
-        startWidth = 100;
-        startHeight = 40;
-        startX = ((canvas.width - startWidth)/2);
-        startY = ((canvas.height - startHeight) / 2)
+        
         ctx.fillStyle = '#669999';
-        ctx.rect(startX, startY, startWidth, startHeight);
+        ctx.rect(startRect);
         ctx.fill();
         ctx.closePath();
         ctx.font = "18px Arial";
         ctx.fillStyle = "#ffffff";
-        ctx.fillText(`Start Game`, (canvas.width /2)-(startWidth/2), (canvas.height / 2) - (startHeight/2));
+        ctx.fillText(`Start Game`, (canvas.width /2)-(startWidth/2), (canvas.height / 2) + (startHeight/2));
         ctx.closePath();
       }
       
