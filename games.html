@@ -399,6 +399,16 @@ https://templatemo.com/tm-532-next-level
         ctx.fillStyle = "#0095DD";
         ctx.fillText(`Score: ${score}`, 8, 20);
       }
+      function drawStartMenu() {
+        ctx.fillStyle = '#669999';
+        ctx.rect(canvas.width / 2, canvas.height / 2, 50, 20);
+        ctx.fill();
+        ctx.closePath();
+        ctx.font = "22px Arial";
+        ctx.fillStyle = "#0095DD";
+        ctx.fillText(`Start Game`, canvas.width / 2, canvas.height / 2);
+        ctx.closePath();
+      }
       
 
       // Draw function
