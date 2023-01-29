@@ -429,7 +429,7 @@ https://templatemo.com/tm-532-next-level
       function drawStartMenu() {
         
         ctx.fillStyle = '#669999';
-        ctx.rect(startRect);
+        ctx.rect(startRect.x, startRect.y, startRect.width, startRect.height);
         ctx.fill();
         ctx.closePath();
         ctx.font = "18px Arial";
