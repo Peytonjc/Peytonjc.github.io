@@ -252,7 +252,7 @@ https://templatemo.com/tm-532-next-level
 
           if (target == "#tab2" && !JGGameOver && JGGameRunning){
             if (JGInterval !== null) return;
-            JGInterval = setInterval(draw, 10);
+            JGInterval = setInterval(JG_draw, 10);
           }
           else{
             clearInterval(JGInterval);
