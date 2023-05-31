@@ -7,6 +7,8 @@
       // Build canvas
       const JG_canvas = document.getElementById("JVCanvas");
       const JG_ctx = JG_canvas.getContext("2d");
+
+      let JG_startRect = {x: startX, y: startY, width: startWidth, height: startHeight};
       
       //Function to get the mouse position
       function JG_getMousePos(canvas, event) {
@@ -24,7 +26,7 @@
       document.addEventListener("keyup", keyUpHandler, false);
       JG_canvas.addEventListener('click', function(evt) {
       var mousePos = JG_getMousePos(canvas, evt);
-      if (JG_isInsideStart(mousePos,startRect)) {
+      if (JG_isInsideStart(mousePos,JG_startRect)) {
         JGGameRunning = true;
         JGInterval = setInterval(draw, 10);
         }else{
@@ -44,7 +46,7 @@
       function JG_drawStartMenu() {
         
         JG_ctx.fillStyle = '#669999';
-        JG_ctx.rect(startRect.x, startRect.y, startRect.width, startRect.height);
+        JG_ctx.rect(JG_startRect.x, JG_startRect.y, JG_startRect.width, JG_startRect.height);
         JG_ctx.fill();
         JG_ctx.closePath();
         JG_ctx.font = "18px Arial";
