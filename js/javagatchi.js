@@ -5,7 +5,7 @@
       //Breakout Game
       // https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
       // Build canvas
-      const JG_canvas = document.getElementById("JVCanvas");
+      const JG_canvas = document.getElementById("JGCanvas");
       const JG_ctx = JG_canvas.getContext("2d");
 
       let JG_startRect = {x: startX, y: startY, width: startWidth, height: startHeight};
