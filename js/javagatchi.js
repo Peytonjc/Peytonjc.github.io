@@ -2,13 +2,16 @@
       
       
 
-      //Breakout Game
-      // https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
+      // JavaGatchi
       // Build canvas
       const JG_canvas = document.getElementById("JGCanvas");
       const JG_ctx = JG_canvas.getContext("2d");
 
-      let JG_startRect = {x: startX, y: startY, width: startWidth, height: startHeight};
+      JG_startWidth = 200;
+      JG_startHeight = 60;
+      JG_startX = ((JG_canvas.width - JG_startWidth)/2);
+      JG_startY = ((JG_canvas.height - JG_startHeight) / 2);
+      let JG_startRect = {x: JG_startX, y: JG_startY, width: JG_startWidth, height: JG_startHeight};
       
       //Function to get the mouse position
       function JG_getMousePos(canvas, event) {
@@ -25,23 +28,14 @@
       document.addEventListener("keydown", keyDownHandler, false);
       document.addEventListener("keyup", keyUpHandler, false);
       JG_canvas.addEventListener('click', function(evt) {
-      var mousePos = JG_getMousePos(canvas, evt);
-      if (JG_isInsideStart(mousePos,JG_startRect)) {
+      var JG_mousePos = JG_getMousePos(JG_canvas, evt);
+      if (JG_isInsideStart(JG_mousePos,JG_startRect)) {
         JGGameRunning = true;
-        JGInterval = setInterval(draw, 10);
+        JGInterval = setInterval(JG_draw, 10);
         }else{
             
         }   
       }, false);
-
-      
-
-      
-
-      
-      
-    
-      
       
       function JG_drawStartMenu() {
         
@@ -51,7 +45,7 @@
         JG_ctx.closePath();
         JG_ctx.font = "18px Arial";
         JG_ctx.fillStyle = "#ffffff";
-        JG_ctx.fillText(`Start JG Game`, (JG_canvas.width /2)-(startWidth/2), (JG_canvas.height / 2));
+        JG_ctx.fillText(`Adopt My Pet!`, (JG_canvas.width /2)-(startWidth/2), (JG_canvas.height / 2));
         JG_ctx.closePath();
       }
       
