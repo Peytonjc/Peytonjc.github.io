@@ -45,7 +45,7 @@
         JG_ctx.closePath();
         JG_ctx.font = "18px Arial";
         JG_ctx.fillStyle = "#ffffff";
-        JG_ctx.fillText(`Adopt My Pet!`, (JG_canvas.width /2)-(startWidth/2), (JG_canvas.height / 2));
+        JG_ctx.fillText(`Adopt My Pet!`, (JG_canvas.width /2)-(JG_startWidth/2), (JG_canvas.height / 2));
         JG_ctx.closePath();
       }
       
