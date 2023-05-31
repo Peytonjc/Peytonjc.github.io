@@ -1,49 +1,4 @@
 
-      let breakoutInterval = null
-      let breakoutGameOver = false
-      let breakoutGameRunning = false
-      $(function() {
-        
-        // Tabs
-        $(".tabgroup > div").hide();
-        $(".tabgroup > div:first-of-type").show();
-        $(".tabs a").click(function(e) {
-          e.preventDefault();
-          var $this = $(this),
-            tabgroup = "#" + $this.parents(".tabs").data("tabgroup"),
-            others = $this
-              .closest("li")
-              .siblings()
-              .children("a"),
-            target = $this.attr("href");
-          others.removeClass("active");
-          $this.addClass("active");
-          $(tabgroup)
-            .children("div")
-            .hide();
-          $(target).show();
-          if (target == "#tab1" && !breakoutGameOver && breakoutGameRunning){
-            if (breakoutInterval !== null) return;
-            breakoutInterval = setInterval(draw, 10);
-          }
-          else{
-            clearInterval(breakoutInterval);
-            breakoutInterval = null
-          }
-
-          // Scroll to tab content (for mobile)
-          if ($(window).width() < 992) {
-            $("html, body").animate(
-              {
-                scrollTop: $("#first-tab-group").offset().top
-              },
-              200
-            );
-          }
-        });
-        drawStartMenu();
-      });
-
       //Breakout Game
       // https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
       // Build canvas

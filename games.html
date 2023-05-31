@@ -98,7 +98,7 @@ https://templatemo.com/tm-532-next-level
               <li>
                 <a href="#tab2" class="">
                   <div class="tm-tab-icon"></div>
-                  Python Encryption
+                  JavaGatchi
                 </a>
               </li>
               <li>
@@ -137,7 +137,7 @@ https://templatemo.com/tm-532-next-level
                       A virtual pet written in Javascript!
                   </p>
                   <p>
-                    <canvas id="VPCanvas" width="480" height="320"></canvas>
+                    <canvas id="JGCanvas" width="480" height="320"></canvas>
                   </p>
                 </div>
               </div>
@@ -210,7 +210,69 @@ https://templatemo.com/tm-532-next-level
 
     <script src="js/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script>
+      let breakoutInterval = null
+      let breakoutGameOver = false
+      let breakoutGameRunning = false
+
+      let JGInterval = null
+      let JGGameOver = false
+      let JGGameRunning = false
+
+      $(function() {
+        
+        // Tabs
+        $(".tabgroup > div").hide();
+        $(".tabgroup > div:first-of-type").show();
+        $(".tabs a").click(function(e) {
+          e.preventDefault();
+          var $this = $(this),
+            tabgroup = "#" + $this.parents(".tabs").data("tabgroup"),
+            others = $this
+              .closest("li")
+              .siblings()
+              .children("a"),
+            target = $this.attr("href");
+          others.removeClass("active");
+          $this.addClass("active");
+          $(tabgroup)
+            .children("div")
+            .hide();
+          $(target).show();
+
+          if (target == "#tab1" && !breakoutGameOver && breakoutGameRunning){
+            if (breakoutInterval !== null) return;
+            breakoutInterval = setInterval(draw, 10);
+          }
+          else{
+            clearInterval(breakoutInterval);
+            breakoutInterval = null
+          }
+
+          if (target == "#tab2" && !JGGameOver && JGGameRunning){
+            if (JGInterval !== null) return;
+            JGInterval = setInterval(draw, 10);
+          }
+          else{
+            clearInterval(JGInterval);
+            JGInterval = null
+          }
+
+          // Scroll to tab content (for mobile)
+          if ($(window).width() < 992) {
+            $("html, body").animate(
+              {
+                scrollTop: $("#first-tab-group").offset().top
+              },
+              200
+            );
+          }
+        });
+        drawStartMenu();
+      });
+    </script>
     <script src="js/breakout.js"></script>
+    <script src="js/javagatchi.js"></script>
   </body>
 </html>
