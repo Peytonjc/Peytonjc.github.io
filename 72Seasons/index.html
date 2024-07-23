@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/icon/ramenStand.ico">
+    <title>72 Seasons</title>
+    <link href="shared/72SeasonsStyle.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+    <div id="header">
+        <img src="Your banner" alt="Your site name">
+    </div>
+    
+    <div id="container">
+        <div id="content">
+            <h2>How to edit this layout</h2>
+            <ul>
+                <li>The three main divs are <code>#content</code>, <code>#leftmenu</code> and <code>#rightmenu</code>, their purposes being rather obvious. <code>#header</code> is the header (which will contain some sort of a top banner). #container is just what it says, a container for the main divs; you can leave it completely alone in your editing unless you want the whole site to cover only a portion of the browser window; then you can set it to for example <code>80%</code>. (Technically you can also set it to a fixed width in pixels and make an image-based layout if you know your stuff in that.)</li>
+                
+                <li>To change fonts, font colors or font sizes for the whole page, change the <code>font-family:verdana, sans-serif</code>, <code>color:#000000</code> and <code>font-size:10pt;</code> specified under <code>body</code>; to change them for the individual main divs, you should obviously just add similar declarations under the styles for that div.</li>
+                
+                <li>The CSS for backgrounds is <code>background:whatever;</code>, with "whatever" being either a hexadecimal color code or an image in the form <code>url(filename)</code> (or both). Borders can be added with something like <code>border:1px solid #000000;</code>, obviously changing the width and the color as you like, and then you can change the "solid" to for example "dashed", "dotted" or "double" for different types of borders. Backgrounds and borders on the three main divs will only reach as far as to the bottom of each individual div's content; I'm afraid this layout can not make the background/border reach all the way to the bottom.</li>
+                
+                <li>Depending on the height of your banner, I recommend changing the <code>height</code> of <code>#header</code> to the same height.</li>
+                
+                <li>To remove one of the menus, delete it in the code and stylesheet and change either the <code>margin-left</code> or <code>margin-right</code> of <code>#content</code>, depending on which menu you removed, to 0. To change the width of the menus or their padding, just make sure to change the left or right (depending on which menu you edit) margin of <code>#content</code> by the same amount.</li>
+                
+                <li>If you put backgrounds on all three main divs and don't want there to be space between the backgrounds on the menus and the background on the content, change the margins of <code>#content</code> to be the exact same as the width of the menu on that side plus twice the combined width of the padding and border. If you have borders on all three and want the borders where they meet to appear like one border rather than two side-by-side, do the same but subtract the width of the content's border on each side.</li>
+                
+                <li>The way the menus are made may appear alien to many, but basically, it's made with lists. If you don't get how it works, just be sure to leave the <code>#leftmenu ul, #rightmenu ul</code> stuff alone in the CSS and copy and paste when you add new categories and menu items. (I double spaced around the code that makes one category to help with that.)</li>
+                
+                <li>To make a different background image for the sublinks in the menus, use <code>#leftmenu ul li ul, #rightmenu ul li ul</code> as the selector.</li>
+                
+                <li>To edit the link styles only for the menus, use <code>#leftmenu a:link, #rightmenu a:link, #leftmenu a:visited, #rightmenu a:visited</code> for the normal links and <code>#leftmenu a:active, #rightmenu a:active, #leftmenu a:hover, #rightmenu a:hover</code> for the links on hover. To remove the underline on any of them, change the <code>text-decoration</code> to <code>none</code>.</li>
+                
+                <li>To make everything except the content appear the same on every page, you need to make sure your host supports SSI. If it does, cut out everything above the content in the code in your files and put in a separate file called for example <code>top.txt</code>, and the same for what is below the content except calling it something else, such as <code>bottom.txt</code>. Instead of that code, put <code>&lt;!--#include file="top.txt" --&gt;</code> above the content and <code>&lt;!--#include file="bottom.txt" --&gt; below it.</code>. Save the <em>pages</em> (not the menus) with the .shtml extension. Edit <code>leftmenu.txt</code> and <code>rightmenu.txt</code> when you want to edit the menus, and it will be edited everywhere.</li>
+                
+                <li>It is also usually better to cut and paste everything between the <code>&lt;style&gt;</code> and <code>&lt;/style&gt;</code> tags (not including the tags themselves) into a separate file called something like <code>stylesheet.css</code> and then externally link to it by replacing the <code>&lt;style&gt;</code> tags with <code>&lt;link href="stylesheet.css" rel="stylesheet" type="text/css"&gt;</code>. Then the stylesheet will also be the same on every page, making a new style will be a breeze, and it will be completely separated from your HTML.</li>
+                
+                <li>If you're going to link back, please visit the <a href="linktome.aspx">Link to Me</a> section to find the most fitting button for your color scheme.</li>
+                </ul>
+        </div>
+    
+    <!--#include vitural="shared/menu.html" -->
+        
+    </div>
+</body>
+</html>
