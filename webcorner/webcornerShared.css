@@ -68,7 +68,13 @@ and then link it! Many fonts have separate files for each style
         /* this is a CSS comment
 to uncomment a line of CSS, remove the * and the /
 before and after the text */
+        tr{
+            border-bottom: 1px solid #ddd;
 
+        }
+        tr:hover {
+            background-color:#5e4e8c
+        }
 
         /* the "container" is what wraps your entire website */
         /* if you want something (like the header) to be Wider than
