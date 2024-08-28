@@ -68,8 +68,9 @@ and then link it! Many fonts have separate files for each style
         /* this is a CSS comment
 to uncomment a line of CSS, remove the * and the /
 before and after the text */
-        tr{
-            border-bottom: 1px solid #ddd;
+        table, th, td{
+            border-bottom: 1px solid #131212;
+                    border-collapse: collapse;
 
         }
         tr:hover {
