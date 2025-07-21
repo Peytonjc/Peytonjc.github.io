@@ -112,3 +112,33 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* Mobile layout tweaks */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header img {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .poem {
+    border-left: none;
+    border-top: 2px solid #ddd;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
