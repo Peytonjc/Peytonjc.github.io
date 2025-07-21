@@ -1,3 +1,5 @@
+/* 72SeasonsStyle.css - Global stylesheet for 72 Microseasons */
+
 body {
   background-color: #f8f5f0;
   font-family: "Georgia", "Times New Roman", serif;
@@ -12,7 +14,7 @@ body {
   padding: 2rem;
   background: #fdfbf7 url('/img/72Seasons/paper-texture.jpg') no-repeat center center;
   background-size: cover;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -87,4 +89,13 @@ footer {
   margin-top: 3rem;
   font-size: 0.9rem;
   color: #aaa;
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
