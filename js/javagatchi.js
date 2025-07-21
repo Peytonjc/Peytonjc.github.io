@@ -7,10 +7,10 @@
       const JG_canvas = document.getElementById("JGCanvas");
       const JG_ctx = JG_canvas.getContext("2d");
 
-      JG_startWidth = 200;
-      JG_startHeight = 60;
-      JG_startX = ((JG_canvas.width - JG_startWidth)/2);
-      JG_startY = ((JG_canvas.height - JG_startHeight) / 2);
+      const JG_startWidth = 200;
+      const JG_startHeight = 60;
+      const JG_startX = ((JG_canvas.width - JG_startWidth)/2);
+      const JG_startY = ((JG_canvas.height - JG_startHeight) / 2);
       let JG_startRect = {x: JG_startX, y: JG_startY, width: JG_startWidth, height: JG_startHeight};
       
       //Function to get the mouse position
