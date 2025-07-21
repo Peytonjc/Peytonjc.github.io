@@ -5,10 +5,10 @@
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
       // Initialize start button object
-      startWidth = 100;
-      startHeight = 40;
-      startX = ((canvas.width - startWidth)/2);
-      startY = ((canvas.height - startHeight) / 2);
+      const startWidth = 100;
+      const startHeight = 40;
+      const startX = ((canvas.width - startWidth)/2);
+      const startY = ((canvas.height - startHeight) / 2);
       let startRect = {x: startX, y: startY, width: startWidth, height: startHeight};
       // Initialize X, Y, and ball radius
       let x = canvas.width / 2;
