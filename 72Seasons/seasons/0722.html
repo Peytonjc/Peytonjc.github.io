@@ -1,28 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiri Hajimete Hiraku - 72 Seasons</title>
-    <link rel="icon" type="image/x-icon" href="/img/icon/ramenStand.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap">
-    <link rel="stylesheet" href="/72Seasons/shared/72SeasonsStyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirikodokoki - Lesser Heat</title>
+  <style>
+    body {
+      background-color: #f8f5f0;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fdfbf7;
+      background-image: url('../images/paper-texture.png'); /* subtle washi texture */
+      background-size: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    .header img {
+      width: 220px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .title-section {
+      flex: 1;
+      margin-left: 1.5rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #2f2f2f;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+    .dates {
+      font-size: 1rem;
+      color: #999;
+      margin-top: 0.5rem;
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+    .main-text {
+      flex: 2;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .poem {
+      flex: 1;
+      font-size: 1rem;
+      font-style: italic;
+      color: #555;
+      border-left: 2px solid #ddd;
+      padding-left: 1rem;
+    }
+    .poem .kanji {
+      writing-mode: vertical-rl;
+      font-family: "Hiragino Mincho ProN", serif;
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="/img/72Seasons/paulowina.jpg" alt="Paulownia">
-        <h1>Kiri Hajimete Hiraku</h1>
-    </header>
-    <main>
-        <article>
-            <time datetime="2023-07-22">around July 22</time>
-            <p>Paulownia trees begin to bloom as midsummer peaks. This entry is a template for future micro-season posts.</p>
-            <p class="haiku">Early summer light<br>Paulownia buds opening<br>Warm breeze carries joy</p>
-        </article>
-    </main>
+  <div class="container">
+    <div class="header">
+      <img src="../images/0717.jpg" alt="Kirikodokoki Illustration">
+      <div class="title-section">
+        <h1>Kirikodokoki</h1>
+        <h2>Lesser Heat</h2>
+        <div class="dates">July 17 – July 21</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="main-text">
+        <p>
+          As summer deepens, the air grows thicker and the hum of cicadas rises to a steady chorus. This microseason, Kirikodokoki, signals the approach of midsummer’s heavy heat.
+        </p>
+        <p>
+          In gardens, the first eggplants and cucumbers ripen, their coolness treasured against the humidity. Farmers observe the shifting sky and prepare for the height of the growing season.
+        </p>
+        <p>
+          Take time to savor the subtleties: the shimmering of distant heat haze, the morning’s dense dew, and the slow drift of clouds that promise fleeting rains.
+        </p>
+      </div>
+
+      <div class="poem">
+        <div class="kanji">
+          こがらしや<br>
+          日に日にあしの<br>
+          美しき
+        </div>
+        <p><strong>kogarashi ya</strong><br>
+        hini hini ashi no<br>
+        utsukushiki</p>
+        <p>— Inoue Shiro</p>
+        <p>
+          day by day, the male mandarin<br>
+          grows more beautiful
+        </p>
+      </div>
+    </div>
+
     <footer>
-        <p><a href="../index.html">Back to all seasons</a></p>
+      Part of the 72 Microseasons series – Exploring the subtle shifts of the Japanese year.
     </footer>
+  </div>
 </body>
 </html>
