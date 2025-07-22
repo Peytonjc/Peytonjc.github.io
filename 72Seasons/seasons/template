@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{SEASON_TITLE}} - {{SEASON_PERIOD}}</title>
+  <link rel="icon" type="image/x-icon" href="/img/icon/ramenStand.ico" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" />
+  <link rel="stylesheet" href="/72Seasons/shared/72SeasonsStyle.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <img src="{{HEADER_IMAGE_PATH}}" alt="{{IMAGE_ALT_TEXT}}">
+      <div class="title-section">
+        <h1>{{SEASON_TITLE}}</h1>
+        <h2>{{SEASON_PERIOD}}</h2>
+        <div class="dates">{{DATE_RANGE}}</div>
+      </div>
+    </div>
+    
+    <!-- Back Link -->
+    <div class="back-to-index">
+      <a href="/72Seasons/index.html">← Back to Index</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="main-text">
+        <p>
+          {{INTRO_PARAGRAPH}}
+        </p>
+        <p>
+          {{JAPANESE_NAME}} ({{ENGLISH_TRANSLATION}}) marks the arrival of {{SEASON_PERIOD}}. {{CULTURAL_CONTEXT}}
+        </p>
+        <p>
+          {{BOTANICAL_FACTS}} {{HISTORICAL_ANECDOTES}}
+        </p>
+        <p>
+          {{MYTHOLOGICAL_CONNECTIONS}}
+        </p>
+        <p>
+          {{REFLECTIVE_CLOSING}}
+        </p>
+      </div>
+
+      <!-- Optional Poem Section -->
+      <div class="poem">
+        <div class="kanji">
+          {{POEM_KANJI}}
+        </div>
+        <p><strong>{{POEM_TRANSLATION_LINE_1}}</strong><br>
+        {{POEM_TRANSLATION_LINE_2}}<br>
+        {{POEM_TRANSLATION_LINE_3}}</p>
+        <p>– <a href="{{POET_LINK}}">{{POET_NAME}}</a></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      Part of the 72 Microseasons series – Exploring the subtle shifts of the Japanese year.<br>
+      <a href="/72Seasons/index.html">Back to Index</a>
+    </footer>
+  </div>
+</body>
+</html>
