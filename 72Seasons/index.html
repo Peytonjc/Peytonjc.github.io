@@ -11,7 +11,7 @@
     <style>
         main {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 3fr 1fr;
             gap: 1.5rem;
         }
         article {
@@ -31,8 +31,34 @@
             font-size: 0.9rem;
             color: #999;
         }
-
+        .sidebar {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            box-shadow: 0 0 5px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+        .sidebar a {
+            color: #2f2f2f;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                margin-top: 1rem;
+            }
             article {
                 padding: 0.75rem;
             }
@@ -50,7 +76,14 @@
         </header>
 
         <main>
-            <section>
+            <section class="recent-posts">
+                <!--
+                <article>
+                    <h2><a href="seasons/0813.html">Evening Cicadas Sing</a></h2>
+                    <time datetime="2025-08-13">around August 13</time>
+                    <p>Early Autumn</p>
+                </article>
+                -->
                 <article>
                     <h2><a href="seasons/0807.html">Cool Wind Rises Again</a></h2>
                     <time datetime="2025-08-07">around August 7</time>
@@ -66,13 +99,18 @@
                     <time datetime="2025-07-28">around July 28</time>
                     <p>Greater Heat</p>
                 </article>
-                <article>
-                    <h2><a href="seasons/0722.html">Paulownia Trees Produce Seeds</a></h2>
-                    <time datetime="2025-07-22">around July 22</time>
-                    <p>Greater Heat</p>
-                </article>
-                <!-- More seasons will be added here -->
             </section>
+            <aside class="sidebar">
+                <h2>All Posts</h2>
+                <ul>
+                    <li><a href="seasons/0807.html">Cool Wind Rises Again</a></li>
+                    <li><a href="seasons/0801.html">Heavy Rain May Fall</a></li>
+                    <li><a href="seasons/0728.html">Damp Earth, Humid Heat</a></li>
+                    <li><a href="seasons/0722.html">Paulownia Trees Produce Seeds</a></li>
+                    <li><a href="seasons/0717.html">Kirikodokoki</a></li>
+                    <!-- <li><a href="seasons/0813.html">Evening Cicadas Sing</a></li> -->
+                </ul>
+            </aside>
         </main>
 
         <footer>
