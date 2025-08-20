@@ -52,6 +52,19 @@
         .sidebar a:hover {
             text-decoration: underline;
         }
+        .about-link {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+        .about-link a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .about-link a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
             main {
                 grid-template-columns: 1fr;
@@ -67,6 +80,7 @@
 </head>
 <body>
     <div class="container">
+        <nav class="about-link"><a href="about.html">About this project</a></nav>
         <header class="header">
             <img src="/img/72Seasons/72SeasonIndexImage.jpeg" alt="Japanese countryside" />
             <div class="title-section">
