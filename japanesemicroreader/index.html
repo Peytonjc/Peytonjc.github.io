@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Japanese Micro Reader</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="reader" aria-labelledby="reader-title">
+      <header class="reader-header">
+        <h1 id="reader-title">Japanese Micro Reader</h1>
+        <p class="reader-subtitle">今日の短い読み物</p>
+      </header>
+
+      <section class="progress" aria-label="progress indicator">
+        <p id="progress-text">読み込み中...</p>
+      </section>
+
+      <article class="card" aria-live="polite">
+        <p class="topic-label">Topic</p>
+        <h2 id="topic">-</h2>
+        <p id="reading-text" class="reading-text">-</p>
+      </article>
+
+      <section class="vocab-section" aria-labelledby="vocab-title">
+        <button id="toggle-vocab" type="button" aria-expanded="false">Show vocabulary</button>
+        <div id="vocab-container" hidden>
+          <h3 id="vocab-title">Key vocabulary</h3>
+          <ul id="vocab-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="micro_readings.js"></script>
+    <script src="reader.js"></script>
+  </body>
+</html>
