@@ -1,0 +1,31 @@
+.gallery-page { line-height: 1.65; }
+.gallery-page *, .gallery-page *::before, .gallery-page *::after { box-sizing: border-box; }
+.gallery-shell { max-width: 72rem; padding: clamp(1rem, 4vw, 3rem); }
+.gallery-page a { color: #254f62; text-underline-offset: .2em; }
+.gallery-page :focus-visible { outline: 2px solid #254f62; outline-offset: 4px; }
+.gallery-page header, .gallery-page main > section, .gallery-page footer { max-width: 63rem; margin-inline: auto; }
+.gallery-intro { padding: clamp(1rem, 4vw, 3rem) 0; }
+.gallery-intro h1 { font-size: clamp(2.35rem, 7vw, 4.8rem); line-height: 1.07; max-width: 16ch; text-wrap: balance; }
+.gallery-intro p { max-width: 63ch; font-size: 1.1rem; }
+.gallery-kicker { color: #8a3f2f; letter-spacing: .1em; text-transform: uppercase; font-size: .875rem; font-weight: bold; }
+.gallery-page ul { padding-inline-start: 1.2rem; }
+.gallery-nav ul { padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; list-style: none; }
+.gallery-room { border-top: 1px solid #a39a8a; padding-block: 1.5rem 2.75rem; }
+.gallery-room h2 { margin: 0; font-size: clamp(1.65rem, 4vw, 2.45rem); font-style: normal; color: #303631; line-height: 1.2; }
+.gallery-room > p { max-width: 66ch; }
+.gallery-works { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 4vw, 2.25rem); }
+.gallery-work { min-width: 0; margin: 0; }
+.gallery-frame { display: grid; place-items: center; min-height: 18rem; padding: clamp(.65rem, 2vw, 1rem); background-color: #eee8dc; border: 1px solid #bfb49f; }
+.gallery-frame img { display: block; width: auto; height: auto; max-width: 100%; max-height: 22rem; object-fit: contain; box-shadow: 0 3px 10px #33271736; }
+.gallery-work figcaption { padding: .75rem 0 0; }
+.gallery-work h3 { margin: 0; font-weight: normal; font-size: 1.45rem; line-height: 1.2; color: #2d322e; }
+.gallery-meta { margin-block: .35rem; color: #56534c; }
+.gallery-work p { margin-block: .5rem; }
+.gallery-work details { margin-block: .75rem; border-block-start: 1px solid #c6bcaa; padding-block: .55rem; }
+.gallery-work summary { color: #254f62; cursor: pointer; font-weight: bold; width: fit-content; min-height: 2rem; }
+.gallery-credit { font-size: .875rem; color: #56534c; }
+.gallery-page footer { color: #56534c; margin-block-start: 1rem; }
+@media (max-width: 44rem) {
+  .gallery-works { grid-template-columns: 1fr; gap: 2rem; }
+  .gallery-frame { min-height: 0; }
+}
