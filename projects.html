@@ -118,13 +118,26 @@ https://templatemo.com/tm-532-next-level
                   <h3 class="tm-text-secondary tm-mb-5">
                     Python Prime Numbers
                   </h3>
-                  <p class="tm-mb-5">
-                    This simple script outputs a .txt file with every available prime number between 0 and a configurable value.
-                    The code can be viewed, modified, and compiled in browser.
+                  <p>
+                    Find every prime up to a number you choose and download the results as a text file.
+                    This browser demo runs locally. You can also <a href="https://github.com/Peytonjc/primeFinder/blob/master/primeFinder.py">view the original Python script</a>.
                   </p>
-                  <p class="tm-mb-5">
-                      <iframe src="https://trinket.io/embed/python/6f3ae98f21?runOption=run" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-                  </p>
+                  <form id="prime-finder" novalidate>
+                    <label for="prime-limit">Upper limit (2 to 100,000)</label>
+                    <div class="input-group mb-3" style="max-width: 20rem">
+                      <input class="form-control" id="prime-limit" type="number" inputmode="numeric" min="2" max="100000" step="1" value="100" required>
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" id="prime-submit" type="submit" disabled>Find primes</button>
+                      </div>
+                    </div>
+                  </form>
+                  <noscript><p>Enable JavaScript to use the browser demo, or run the original Python script locally.</p></noscript>
+                  <p id="prime-status" role="status"></p>
+                  <div id="prime-results" hidden>
+                    <label for="prime-list">Prime numbers</label>
+                    <textarea class="form-control mb-3" id="prime-list" rows="5" readonly></textarea>
+                    <a class="btn btn-outline-secondary" id="prime-download" download="primeText.txt">Download .txt</a>
+                  </div>
                 </div>
               </div>
               <div id="tab2">
@@ -225,6 +238,7 @@ https://templatemo.com/tm-532-next-level
       </footer>
     </div>
 
+    <script src="js/prime-finder.js" defer></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
